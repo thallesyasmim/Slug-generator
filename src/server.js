@@ -18,7 +18,7 @@ async function getTitlesInPages () {
         if(image_btn_close) {
             await image_btn_close.click()
         }
-        const title = await page.$eval('.product-title-text', element => element.innerHTML)
+        const title = await page.$eval('.product-title-text', element => element.innerHTML) // Example Selector
         await browser.close()
 
         String.prototype.slugify = function () {
